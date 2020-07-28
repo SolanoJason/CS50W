@@ -1,0 +1,7 @@
+%message {
+  border: 2px solid black;
+  font-weight: bold;
+}
+.alert-dark, .alert-info, .alert-light, .alert-danger,.alert-warning, .alert-secondary, .alert-success{
+  @extend %message;
+}

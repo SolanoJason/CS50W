@@ -1,0 +1,6 @@
+.alert-dark, .alert-info, .alert-light, .alert-danger, .alert-warning, .alert-secondary, .alert-success {
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=inheritance.css.map */

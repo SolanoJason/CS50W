@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="demo">
+    <h1>First</h1>
+    <h1>Second</h1>
+    <h1>Third</h1>
+    <h1>Fourth</h1>
+    <h1>Fifth</h1>
+    <script>
+      var h = document.getElementsByTagName("h1");
+      var num = 0;
+      var pos = 0;
+      function changeh1() {
+        h[pos++].innerHTML = num++;
+        if (pos == 5) {
+          pos = 0;
+        }
+      }
+      function write() {
+        document.write("hola");
+      }
+      setInterval(changeh1, 100);
+    </script>
+  </body>
+</html>
+

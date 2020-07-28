@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Borders</title>
+    <style>
+      h1 {
+        font-size: 90px;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: solid yellow 5px;
+      }
+      #mixed {
+        border-top: solid blue 5px;
+        border-top-style: dotted;
+        border-right: solid yellow 5px;
+        border-right-style: dashed;
+        border-bottom: solid green 5px;
+        border-bottom-style: double;
+        border-left: solid gray 5px;
+        border-left-style: outset;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="border-style: dotted">Dotted</h1>
+    <h1 style="border-style: dashed">Dashed</h1>
+    <h1 style="border-style: solid">Solid</h1>
+    <h1 style="border-style: double">Double</h1>
+    <h1 style="border-style: groove">Groove</h1>
+    <h1 style="border-style: ridge">Ridge</h1>
+    <h1 style="border-style: inset">Inset</h1>
+    <h1 style="border-style: outset">Outset</h1>
+    <h1 style="border-style: none">None</h1>
+    <h1 style="border-style: hidden">Hidden</h1>
+    <h1 id="mixed">Mixed border</h1>
+  </body>
+</html>
