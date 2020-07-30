@@ -17,9 +17,9 @@ body {
   background-color: #292929;
 }
 ul {
-  width: 45%;
-  margin: 1rem auto;
-  padding-left: 0px;
+  position: relative;
+  top: 2em;
+  /* outline: 1px solid greenyellow; */
 }
 li {
   list-style: none;
@@ -36,9 +36,17 @@ li a {
   color: #ccc;
   width: 100%;
   box-sizing: border-box;
-  transition: padding-left 1s, box-shadow 1s;
+  transition: padding-left 0.5s, box-shadow 0.7s;
 }
 li a:hover {
   padding-left: 1.5em;
   box-shadow: 10em 0em #494949 inset;
+}
+nav {
+  width: 18%;
+  position: absolute;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
