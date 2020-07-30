@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* General styles */
+nav {
+}
+/* First level */
+nav li {
+  background-color: black;
+  list-style: none;
+  position: relative;
+}
+nav a {
+  color: #dddddd;
+  display: table-cell;
+  width: 20%;
+  text-decoration: none;
+  line-height: 2rem;
+}
+nav ul {
+  padding-left: 0px;
+}
+nav > ul {
+  width: 100%;
+  display: table;
+}
+nav li > ul {
+  position: absolute;
+  display: table-cell;
+}
+nav li > ul > li > ul {
+    position: absolute;
+    width: 150%;
+    top: 0%;
+    left: 100%;
+}
+/* Second level */
+nav > ul ul ul ul{
+  display: none;
+}
+nav > ul > li {
+  text-align: center;
+  display: table-cell;
+}
+nav li:hover > ul {
+  display: block;
+}
