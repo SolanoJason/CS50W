@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="load()">
     <p id="date">Click below</p>
-    <button onclick="show()">Click on me to see the date</button>
+    <button>Click on me to see the date</button>
+    <form action="">
+      <label>Label</label>
+      <input type="text" onchange="change()" />
+    </form>
     <script>
       function show() {
-          var x = document.getElementById("date");
-          x.innerHTML = "<button>Hola</button>";
+        let x = document.getElementById("date");
+        x.innerHTML = Date();
       }
+      function load() {
+        alert("The page has loaded");
+      }
+      function change() {
+        let x = document.getElementsByTagName("label");
+        let y = document.getElementsByTagName("input");
+        x[0].innerHTML = y[0].value;
+      } 
+      var y = document.getElementsByTagName("button");
+      y[0].addEventListener("click",show);
+      var x = document.getElementsByTagName("input");
+      x[0].placeholder = "Put in and modify the label";
     </script>
   </body>
 </html>

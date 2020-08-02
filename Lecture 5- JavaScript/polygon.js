@@ -1,14 +1,25 @@
-function Polygon(arr){
-    this.arr = arr;
-    this.perimeter = function(){
-        let sum = 0;
-        this.arr.foreach((value) => {
-            sum += value;
-        })
-        return sum;
-    }
-}
-var arr = [12,1,1,0];
-arr.forEach
-/*var rect = new Polygon([12,32,12,12]);
-console.log(rect.perimeter());*/
+// function Polygon(arr){
+//     this.arr = arr;
+//     function perimeter(){
+//         let sum = 0;
+//         this.arr.forEach((value) => {
+//             sum += value;
+//         });
+//         return sum;
+//     }
+//     grow() {
+//         this.height += 2;
+//       }
+// }
+
+// var arr = [2,3,2];
+// var pol = new Polygon(arr);
+// console.log(pol.perimeter);
+function Tree(){
+    height: 10;
+    color: 'green';
+    grow() {
+      this.height += 2;
+    };
+  };
+  tree.grow();

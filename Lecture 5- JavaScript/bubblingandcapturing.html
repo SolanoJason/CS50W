@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer2">
+      <div id="outer">
+        <button id="inner">Click me!</button>
+        <p>Just a paragraph inside the div</p>
+      </div>
+    </div>
+    <script>
+      var oute = document.getElementById("outer");
+      var oute2 = document.getElementById("outer2");
+      var inne = document.getElementById("inner");
+      var p = document.getElementsByTagName("p");
+      function inner() {
+        alert("Inner!");
+      }
+      function outer() {
+        alert("Outer!");
+      }
+      function outer2() {
+          alert("Outer2!");
+      }
+      inne.addEventListener("click", inner);
+      oute.addEventListener("click", outer, true);
+      oute2.addEventListener("click", outer2, true);
+    </script>
+  </body>
+</html>
