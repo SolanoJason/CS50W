@@ -1,0 +1,15 @@
+.contact-form {
+    width: 25%;
+    margin: 2rem auto;
+    outline: 5px solid blue;
+}
+.contact-form__input, .contact-form__submit {
+    outline: 3px solid cadetblue;
+    margin: 1rem auto;
+    width: 100%;
+    display: block;
+}
+
+.contact-form:nth-child(2) {
+    outline: 3px solid red;
+}
