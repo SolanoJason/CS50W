@@ -1,0 +1,15 @@
+:root {
+    --colorinput: red;
+}
+.form {
+    background-color: var(--colorinput);
+    width: 80%;
+    margin: auto auto;
+    padding: 0px;
+}
+.form__input, .form__submit {
+    margin-left: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 40%;
+}
