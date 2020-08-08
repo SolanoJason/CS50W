@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            color: #0a0;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+    <script>
+        var ol = document.getElementsByTagName("ol")[0];
+        var node = document.createTextNode("jaja");
+        var li = document.createElement("li");
+        li.appendChild(node);
+        ol.insertBefore(li, document.getElementsByTagName("li")[1]);
+    </script>
+</body>
+</html>
