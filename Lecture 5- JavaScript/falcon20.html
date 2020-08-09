@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      input {
+        display: block;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="formulario">
+      <input
+        type="text"
+        name="name1"
+        value=""
+        placeholder="Nombre"
+        maxlength="20"
+        autofocus
+      />
+      <input type="radio" name="gener" value="female" />
+      Female
+      <input type="radio" name="gener" value="male"  /> Male
+      <input type="checkbox" name="terms"  /> I've accepted
+      the terms conditions
+      <input type="submit" value="Send" name="submit" />
+    </form>
+    <script>
+      var form = document.getElementsByName("formulario")[0];
+      function validar(e) {
+        if(form.name1.value === "") {
+          alert("You should fill in your name");
+          e.preventDefault();
+          form.name1.focus();
+        }else if(!form.gener[0].checked & !form.gener[1].checked) {
+          alert("You should select your gener");
+          e.preventDefault();
+          form.gener[0].focus();
+        }else if(!form.terms.checked) {
+          alert("You must accept the terms conditions");
+          e.preventDefault();
+          form.terms.focus();
+        }
+      }
+      form.addEventListener("submit",validar);
+    </script>
+  </body>
+</html>

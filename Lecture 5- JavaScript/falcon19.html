@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>  
+      img {
+        margin: auto auto;
+        display: block;
+      }
+      div {
+        position: fixed;
+        top: 50vh;
+        left: 5vw;
+        background-color: aqua;
+      }
+      img {
+          transition: width 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="http://lorempixel.com/200/200/" alt="imagen" />
+    <div>
+      <button onclick="max()">+</button>
+      <button>-</button>
+    </div>
+    <script>
+      var img = document.getElementsByTagName("img")[0];
+      var buttons = document.getElementsByTagName("button");
+      function max() {
+        var width = parseInt(img.width) + 20;
+        img.setAttribute("width", width);
+      }
+      function min() {
+        var width = parseInt(img.width) - 20;
+        img.setAttribute("width", width);
+      }
+      buttons[1].addEventListener("click", min);
+    </script>
+  </body>
+</html>
