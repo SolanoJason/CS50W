@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      input {
+        line-height: 2em;
+        margin: 0.5em;
+      }
+      button {
+        line-height: 2ems;
+        padding: 0.5em 4em;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        height: 20vh;
+      }
+      .container0 {
+        background-color: #eee;
+        height: 50vh;
+      }
+      .task {
+        display: flex;
+        margin: 1em 1em;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+        background-color: #666;
+        cursor: pointer;
+      }
+      .task:nth-child(even) {
+        background-color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" placeholder="Tarea:" autofocus />
+      <button>Add task</button>
+    </div>
+    <div class="container0">
+      <div class="task">
+        One task
+      </div>
+      <div class="task">
+        Second task
+      </div>
+      <div class="task">
+        Third task
+      </div>
+      <div class="task">
+        Fourth task
+      </div>
+      <div class="task">
+        Fifth task
+      </div>
+    </div>
+    <script>
+      function addTask() {
+        let input = document.getElementsByTagName("input")[0];
+        if (!input.value == "") {
+          let task = document.createElement("div");
+          let text = document.createTextNode(input.value);
+          let container0 = document.getElementsByClassName(
+            "container0"
+          )[0];
+          task.setAttribute("class", "task");
+          task.addEventListener("click", removeTask);
+          task.appendChild(text);
+          container0.appendChild(task);
+        } else {
+          alert("You should add a task");
+        }
+      }
+      function removeTask() {
+        this.parentNode.removeChild(this);
+      }
+      var button = document.getElementsByTagName("button")[0];
+      var tasks = document.getElementsByClassName("task");
+      for (let i = 0; i < tasks.length; i++) {
+        tasks[i].addEventListener("click", removeTask);
+      }
+      button.addEventListener("click", addTask);
+    </script>
+  </body>
+</html>
